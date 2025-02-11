@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
@@ -9,83 +8,74 @@ function getRandomLuminosity() {
 }
 
 function TransitMethodGame() {
-
   const maximumScore = 5;
   const navigate = useNavigate();
 
   const [luminosityGroup, setLuminosityGroup] = useState([]);
-  // Pontuação do jogador
   const [score, setScore] = useState(0);
-  // Índice do corpo correto (contém o exoplaneta)
   const [correctBody, setCorrectBody] = useState(null);
-  // Luminosidade que pisca do exoplaneta
-  const [blinkingLuminosity, setBlinkingLuminosity] = useState(100); 
-  // Posições randomizadas das estrelas
-  const [positions, setPositions] = useState([]); 
+  const [blinkingLuminosity, setBlinkingLuminosity] = useState(100);
+  const [positions, setPositions] = useState([]);
+  const [message, setMessage] = useState({ text: '', visible: false });
 
-  // Função que inicializa o jogo
   const initializeGame = () => {
     const group = [];
     const newPositions = [];
     for (let i = 0; i < 15; i++) {
       group.push(getRandomLuminosity());
       newPositions.push({
-        // Posição horizontal aleatória (máximo de 90vw)
         left: Math.random() * 90 + 'vw',
-        // Posição vertical aleatória na parte de cima da tela (máximo de 30vh) 
-        top: Math.random() * 30 + 'vh', 
+        top: Math.random() * 30 + 'vh',
       });
     }
 
-    // Definimos um corpo aleatório que terá o efeito de trânsito (exoplaneta piscando)
     const randomBody = Math.floor(Math.random() * 8);
-    // Definimos inicialmente a luminosidade do exoplaneta (máxima, antes de piscar)
     group[randomBody] = 100;
-    
+
     setLuminosityGroup(group);
-    setCorrectBody(randomBody); // Salvamos qual corpo tem o exoplaneta
-    setPositions(newPositions); // Salvamos as posições aleatórias
+    setCorrectBody(randomBody);
+    setPositions(newPositions);
   };
 
-  // Inicializamos o jogo ao carregar o componente
   useEffect(() => {
     initializeGame();
   }, []);
 
-  // Função para simular o "piscar" do exoplaneta com periodicidade
   useEffect(() => {
     let interval;
     if (correctBody !== null) {
       interval = setInterval(() => {
-        // Alterna a luminosidade do corpo exoplaneta entre 100 e 75-80 (simulando o trânsito)
-        setBlinkingLuminosity(prevLuminosity => 
+        setBlinkingLuminosity(prevLuminosity =>
           prevLuminosity === 100 ? Math.random() * 5 + 55 : 100
         );
-      }, 1000); // Pisca a cada 1 segundo
+      }, 1000);
     }
 
     return () => clearInterval(interval);
   }, [correctBody]);
 
+  const showMessage = (text) => {
+    setMessage({ text, visible: true });
+    setTimeout(() => {
+      setMessage({ text: '', visible: false });
+      initializeGame();
+    }, 2000); // A mensagem desaparece após 2 segundos
+  };
+
   const handleClick = (bodyIndex) => {
-    // Verificamos se o jogador clicou no corpo correto
     if (bodyIndex === correctBody) {
       setScore(score + 1);
-      alert("Você acertou! Um possível exoplaneta foi detectado!");
-      if((score + 1) >= maximumScore) {
+      showMessage("Você acertou! Um possível exoplaneta foi detectado!");
+      if ((score + 1) >= maximumScore) {
         navigate('/history');
       }
     } else {
-      alert("Tente novamente. O escolhido não contém um explaneta.");
+      showMessage("Tente novamente. O escolhido não contém um exoplaneta.");
     }
-
-    // Reinicializamos o jogo após cada tentativa
-    initializeGame();
   };
 
   return (
     <div style={styles.background}>
-      {/* Renderizando o grupo de 8 corpos */}
       <div style={styles.groupContainer}>
         {luminosityGroup.map((luminosity, bodyIndex) => (
           <div
@@ -97,21 +87,23 @@ function TransitMethodGame() {
               left: positions[bodyIndex]?.left,
               top: positions[bodyIndex]?.top,
               opacity: bodyIndex === correctBody ? blinkingLuminosity / 100 : luminosity / 100,
-              // Substitua com o caminho da sua imagem de estrela
-              backgroundImage: 'url(src/assets/MinigameTransito/star_game1.png)', 
+              backgroundImage: 'url(src/assets/MinigameTransito/star_game1.png)',
             }}
           ></div>
         ))}
       </div>
       <p style={{ color: 'white' }}>Score: {`${score}/${maximumScore}`}</p>
+      {message.visible && (
+        <div style={styles.messageBox}>
+          {message.text}
+        </div>
+      )}
     </div>
   );
 }
 
-
 const styles = {
   background: {
-    // Imagem de fundo
     backgroundImage: 'url(src/assets/MinigameTransito/background_game1.webp)',
     backgroundSize: 'cover',
     width: '100vw',
@@ -120,13 +112,11 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    // Necessário para que os corpos sejam posicionados de forma absoluta
     position: 'relative',
   },
   groupContainer: {
     position: 'relative',
     width: '100%',
-    // O container cobre toda a tela
     height: '100%',
   },
   body: {
@@ -135,8 +125,19 @@ const styles = {
     height: '60px',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
-    // Removendo borda
     border: 'none',
+  },
+  messageBox: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: 'rgba(16, 12, 73, 0.8)',
+    color: 'white',
+    padding: '20px',
+    borderRadius: '10px',
+    textAlign: 'center',
+    zIndex: 1000,
   },
 };
 
