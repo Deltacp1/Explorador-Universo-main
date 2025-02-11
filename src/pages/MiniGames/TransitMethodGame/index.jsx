@@ -8,7 +8,7 @@ function getRandomLuminosity() {
 }
 
 function TransitMethodGame() {
-  const maximumScore = 5;
+  const maximumScore = 2;
   const navigate = useNavigate();
 
   const [luminosityGroup, setLuminosityGroup] = useState([]);
