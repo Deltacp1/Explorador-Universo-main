@@ -246,7 +246,7 @@ export const story = {
     },
   ],
   credits: {
-    team: 'T.A.R.D.I.S',
+    team: 'EXPLORADOR DO UNIVERSO',
     slogan: 'A aventura nunca tem fim...'
   }
 };

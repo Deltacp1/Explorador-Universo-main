@@ -17,7 +17,7 @@ const LoginPage = ({ onStart }) => {
 
   return (
     <div className={styles['login-container']}>
-      <h1 className={styles['login-title']}>T.A.R.D.I.S</h1>
+      <h1 className={styles['login-title']}>EXPLORADOR DO UNIVERSO</h1>
       <button className={styles['login-button']} onClick={handleToStoryPage}>
         <h2>{" INICIAR "}</h2>
       </button>
