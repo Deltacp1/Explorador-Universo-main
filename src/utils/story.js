@@ -30,32 +30,32 @@ import character2 from '../assets/StoryPage/character2.png';
 import character3 from '../assets/StoryPage/character3.png';
 
 export const story = {
-  title: "The Destiny Beyond the Stars: The Mission that Changed Everything.",
+  title: "O destino além das estrelas: A missão que mudou tudo.",
   prologue: [
-    `     The year is 2147. Earth is going through difficult times. Natural resources are almost depleted, and humanity needs to find a new home to survive.`,
-    `     The last hope comes with the discovery of exoplanets, worlds orbiting distant stars that could be habitable. You are part of the crew of the Stella Explorer spaceship, led by the brave Captain Aurora.`,
-    `     Your mission: to find a new home for humanity among the stars...`
+    `     O ano é 2147. A Terra está passando por momentos difíceis. Os recursos naturais estão quase esgotados e a humanidade precisa encontrar um novo lar para sobreviver.`,
+    `     A última esperança vem com a descoberta de exoplanetas, mundos orbitando estrelas distantes que poderiam ser habitáveis. Você faz parte da tripulação da nave Stella Explorer, liderada pelo corajoso Capitão Aurora.`,
+    `     Sua missão: encontrar um novo lar para a humanidade entre as estrelas...`
   ],
   chapters: [
     {
       chapter: 0,
-      chapterName: "    Chapter 1: The Great Decision",
+      chapterName: "     Capítulo 1: A grande decisão",
       conversations: [
         {
-          title: "Departure",
-          description: `You are in the command room of the ship, gazing at Earth for the last time. Captain Aurora calls the crew for a meeting. "Earth is in danger. We need to find a habitable planet, and fast!"`,
+          title: "Partida",
+          description: `Você está na sala de comando da nave, olhando para a Terra pela última vez. A capitã Aurora convoca a tripulação para uma reunião. "A Terra está em perigo. Precisamos encontrar um planeta habitável e rápido!"`,
           backgroundImage: bg2,
           characterImage: character1,
         },
         {
-          title: "Departure",
-          description: `Dr. Orion, the chief scientist, suggests exploring a distant star system with the potential to find Earth-like planets.`,
+          title: "Partida",
+          description: `Dr. Orion, a cientista lider da tripulação, explica: "A nave Stella Explorer tem um sensor que detecta exoplanetas orbitando estrelas distantes. Se voce conseguir encontrar um, podemos encontrar um novo lar para a humanidade.`,
           backgroundImage: bg2,
           characterImage: character2,
         },
         {
-          title: "Departure",
-          description: `Get ready for an incredible journey where you will uncover the secrets of exoplanets.`,
+          title: "Partida",
+          description: `Prepare-se para uma jornada incrível onde você descobrirá os segredos dos exoplanetas.`,
           backgroundImage: bg2_1,
           characterImage: character3,
         },
@@ -63,54 +63,54 @@ export const story = {
     },
     {
       chapter: 1,
-      chapterName: "    Chapter 2: The First Planet",
+      chapterName: "    Capítulo 2: O primeiro planeta",
       conversations: [
         {
-          title: "What are Exoplanets",
-          description: `Exoplanets are like the planets we know, such as Earth, Mars, and Jupiter. But the difference is that they orbit other stars.`,
+          title: "O que são Exoplanetas",
+          description: `Os exoplanetas são como os planetas que conhecemos, como Terra, Marte e Júpiter. Mas a diferença é que orbitam outras estrelas.`,
           backgroundImage: bg4,
           characterImage: character3,
         },
         {
-          title: "What are Exoplanets",
-          description: `Each exoplanet is unique! They can be huge, like Jupiter, or small, like Earth. They are classified based on their composition, size, and even whether they might support life.`,
+          title: "O que são Exoplanetas",
+          description: `Cada exoplaneta é único! Eles podem ser enormes, como Júpiter, ou pequenos, como a Terra. Eles são classificados com base em sua composição, tamanho e até mesmo se podem sustentar vida.`,
           backgroundImage: bg4,
           characterImage: character3,
         },
         {
-          title: "The Transit Method",
-          description: `You arrive at the first star system. The sensors begin to detect variations in the brightness of the star ahead.`,
+          title: "O Metodo Transiente",
+          description: `Você chega ao primeiro sistema estelar. Os sensores começam a detectar variações no brilho da estrela à frente.`,
           backgroundImage: bg5_1,
           characterImage: character3,
         },
         {
-          title: "The Transit Method",
-          description: `Dr. Orion : "When a planet passes in front of a star, it blocks part of the light. This is called a transit. We can discover planets this way."`,
+          title: "O Metodo Transiente",
+          description: `Dr. Orion: "Quando um planeta passa na frente de uma estrela, ele bloqueia parte da luz. Isso é chamado de trânsito. Podemos descobrir planetas desta forma."`,
           backgroundImage: bg5,
           characterImage: character2,
         },
         {
-          title: "Characteristics of Exoplanets",
-          description: `You observe the brightness graph and confirm: a gas giant has been discovered. But, unfortunately, this planet is not habitable. Captain Aurora smiles, "It's not what we're looking for yet, but we're on the right track!"`,
+          title: "Características dos Exoplanetas",
+          description: `Você observa o gráfico de brilho e confirma: um gigante gasoso foi descoberto. Mas, infelizmente, este planeta não é habitável. Capitão Aurora sorri: “Ainda não é o que procuramos, mas estamos no caminho certo!”`,
           backgroundImage: bg7,
           characterImage: character1,
           minigame: 0,
         },
         {
-          title: "Characteristics of Exoplanets",
-          description: `"We should name our discovery, but how do exoplanets get their names?" Captain Aurora asks.`,
+          title: "Características dos Exoplanetas",
+          description: `"Devíamos nomear a nossa descoberta, mas como é que os exoplanetas recebem os seus nomes?", pergunta a capitã Aurora. `,
           backgroundImage: bg7,
           characterImage: character1,
         },
         {
-          title: "Naming",
-          description: `Exoplanets are named based on their stars and the order in which they were discovered, using letters in alphabetical order according to their distance from the star: b, c, d, e, f, g, and h.`,
+          title: "Nomeação",
+          description: `Os exoplanetas são nomeados com base em suas estrelas e na ordem em que foram descobertos, usando letras em ordem alfabética de acordo com sua distância da estrela: b, c, d, e, f, g e h.`,
           backgroundImage: bg8,
           characterImage: character2,
         },
         {
-          title: "Naming",
-          description: `For example, 'Kepler-22b' is a planet discovered by the Kepler telescope and is the second planet found around the star 'Kepler-22'.`,
+          title: "Nomeação",
+          description: `Por exemplo, 'Kepler-22b' é um planeta descoberto pelo telescópio Kepler e é o segundo planeta encontrado em torno da estrela 'Kepler-22'.`,
           backgroundImage: bg8,
           characterImage: character2,
         },
@@ -118,41 +118,41 @@ export const story = {
     },
     {
       chapter: 2,
-      chapterName: "    Chapter 3: A Mysterious Signal",
+      chapterName: "    Chapter 3: Um sinal misterioso",
       conversations: [
         {
-          title: "The Doppler Effect",
-          description: `In the next system, something strange happens. The light of the star oscillates between red and blue. Dr. Orion quickly identifies, "It's the Doppler effect! Something is pulling on this star, probably a massive planet.`,
+          title: "O Efeito Doppler",
+          description: `No próximo sistema, algo estranho acontece. A luz da estrela oscila entre o vermelho e o azul. Orion identifica rapidamente: "É o efeito Doppler! Algo está puxando esta estrela, provavelmente um planeta massivo."`,
           backgroundImage: bg10_2,
           characterImage: character2,
         },
         {
-          title: "Gravitational Microlensing",
-          description: `Then something incredible happens. A distant star shines brighter than usual.`,
+          title: "Microlente Gravitacional",
+          description: `Então algo incrível acontece. Uma estrela distante brilha mais forte que o normal.`,
           backgroundImage: bg10_1,
           characterImage: character3,
         },
         {
-          title: "Gravitational Microlensing",
-          description: `Dr. Orion quickly identifies: "It's a gravitational microlensing! This means there's something massive, probably an exoplanet, between us and that star."`,
+          title: "Microlente Gravitacional",
+          description: `Orion identifica rapidamente: "É uma microlente gravitacional! Isto significa que há algo massivo, provavelmente um exoplaneta, entre nós e aquela estrela."`,
           backgroundImage: bg10_2,
           characterImage: character2,
         },
         {
-          title: "Discoveries",
-          description: `You monitor the signals, and after careful observation, you discover a new planet. This time, it's a planet with a dense atmosphere and signs of water. Captain Aurora becomes excited: "This might be the place we are looking for!" But there's still much to investigate.`,
+          title: "Descobertas",
+          description: `Você monitora os sinais e, após observação cuidadosa, descobre um novo planeta. Desta vez, é um planeta com atmosfera densa e sinais de água. Capitão Aurora fica entusiasmado: “Este pode ser o lugar que procuramos!” Mas ainda há muito para investigar.`,
           backgroundImage: bg11,
           characterImage: character1,
         },
         {
-          title: "Discoveries",
-          description: `Not all discovered exoplanets have been confirmed. Some are called 'candidates' until we have more data about them.`,
+          title: "Descobertas",
+          description: `Nem todos os exoplanetas descobertos foram confirmados. Alguns são chamados de “candidatos” até que tenhamos mais dados sobre eles.`,
           backgroundImage: bg11,
           characterImage: character3,
         },
         {
-          title: "Visit the 'Eyes on Exoplanets'",
-          description: `EXPLORE THE EXOPLANETS AND THE CANDIDATES IN NASA'S APPLICATION`,
+          title: "Visite o 'Olhos nos Exoplanetas'",
+          description: `EXPLORE OS EXOPLANETAS E OS CANDIDATOS NA APLICAÇÃO DA NASA`,
           link: 'https://eyes.nasa.gov/apps/exo/',
           backgroundImage: bg12,
           characterImage: character3,
@@ -161,53 +161,53 @@ export const story = {
     },
     {
       chapter: 3,
-      chapterName: "    Chapter 4: Exploring New Worlds",
+      chapterName: "    Chapter 4: Explorando Novos Mundos",
       conversations: [
         {
-          title: "Landing on the Exoplanet",
-          description: `After months of traveling, the ship finally lands on a promising exoplanet. The air is breathable, and the surface seems stable. Let's explore some impressive exoplanets that scientists have already discovered.`,
+          title: "Pousando no Exoplaneta.",
+          description: `Após meses de viagem, a nave finalmente pousa em um exoplaneta promissor. O ar é respirável, e a superfície parece estável. Vamos explorar alguns exoplanetas impressionantes que os cientistas já descobriram.`,
           backgroundImage: bg14,
           characterImage: character3,
         },
         {
-          title: "Types of Exoplanets",
-          description: `Some exoplanets may be water- or ice-dominated, while others consist mainly of iron or carbon. We've discovered lava worlds with molten seas, puffy planets as light as Styrofoam, and dense cores of planets still orbiting their stars.`,
+          title: "Tipos de Exoplanetas",
+          description: `Alguns exoplanetas podem ser dominados por água ou gelo, enquanto outros consistem principalmente de ferro ou carbono. Descobrimos mundos de lava com mares derretidos, planetas inchados leves como isopor e núcleos densos de planetas que ainda orbitam suas estrelas.`,
           backgroundImage: bg14,
           characterImage: character3,
         },
         {
-          title: "Types of Exoplanets",
-          description: `Gas giants, like Jupiter and Saturn, are massive planets mostly made of gas. Some, called Hot Jupiters, orbit so close to their stars that they become scorching hot!`,
+          title: "Tipos de Exoplanetas",
+          description: `Gigantes gasosos, como Júpiter e Saturno, são planetas massivos feitos principalmente de gás. Alguns, chamados de Júpiteres Quentes, orbitam tão perto de suas estrelas que se tornam extremamente quentes!`,
           backgroundImage: bg15,
           characterImage: character3,
         },
         {
-          title: "Types of Exoplanets",
-          description: `Then we have Neptunian planets, similar to Neptune and Uranus in our Solar System. They have atmospheres of hydrogen and helium and rocky cores. We even find mini-Neptunes, smaller but just as interesting.`,
+          title: "Tipos de Exoplanetas",
+          description: `Depois, temos os planetas netunianos, semelhantes a Netuno e Urano no nosso Sistema Solar. Eles possuem atmosferas de hidrogênio e hélio e núcleos rochosos. Até encontramos mini-Netunos, menores, mas igualmente interessantes.`,
           backgroundImage: bg16,
           characterImage: character3,
         },
         {
-          title: "Types of Exoplanets",
-          description: `Super-Earths are larger than Earth but smaller than Neptune. Some may have atmospheres and could even be habitable!`,
+          title: "Tipos de Exoplanetas",
+          description: `Super-Terras são maiores que a Terra, mas menores que Netuno. Algumas podem ter atmosferas e até serem habitáveis!`,
           backgroundImage: bg17,
           characterImage: character3,
         },
         {
-          title: "Types of Exoplanets",
-          description: `Terrestrial planets are Earth-sized or smaller, made of rock and minerals. Some might even have water or signs of life!`,
+          title: "Tipos de Exoplanetas",
+          description: `Planetas terrestres são do tamanho da Terra ou menores, feitos de rochas e minerais. Alguns podem até ter água ou sinais de vida!`,
           backgroundImage: bg18,
           characterImage: character3,
         },
         {
-          title: "Types of Exoplanets",
-          description: `The closest known exoplanet to Earth, Proxima Centauri b, is still about 4 light-years away`,
+          title: "Tipos de Exoplanetas",
+          description: `O exoplaneta conhecido mais próximo da Terra, Proxima Centauri b, ainda está a cerca de 4 anos-luz de distância.`,
           backgroundImage: bg19,
           characterImage: character3,
         },
         {
-          title: "Types of Exoplanets",
-          description: `The Exoplanets now have been successfully identified!`,
+          title: "Tipos de Exoplanetas",
+          description: `Os Exoplanetas foram identificados com sucesso agora!`,
           backgroundImage: bg19,
           characterImage: character3,
           minigame: 1,
@@ -216,28 +216,28 @@ export const story = {
     },
     {
       chapter: 4,
-      chapterName: "    Chapter 5: A new hope",
+      chapterName: "    Chapter 5: A nova esperança",
       conversations: [
         {
-          title: "The end of the journey",
-          description: `Now you know the secrets of exoplanets! These mysterious worlds are scattered across the galaxy, waiting to be explored. Each one is unique, from gas giants to rocky, Earth-like planets. Who knows? One of them might even harbor life!`,
+          title: "O Fim da Jornada",
+          description: `Agora você conhece os segredos dos exoplanetas! Esses mundos misteriosos estão espalhados pela galáxia, esperando para serem explorados. Cada um é único, desde gigantes gasosos até planetas rochosos semelhantes à Terra. Quem sabe? Um deles pode até abrigar vida!`,
           backgroundImage: bg22,
           characterImage: character3,
         },
         {
-          title: "The end of the journey",
-          description: `Scientists are discovering new exoplanets every day. And with each discovery, we get closer to answering one of the biggest questions: Are we alone in the universe? The future of exploration is bright, and maybe one day, you'll be the one to help find a new world.`,
+          title: "O Fim da Jornada",
+          description: `Cientistas estão descobrindo novos exoplanetas todos os dias. E, a cada descoberta, ficamos mais perto de responder a uma das maiores perguntas: Estamos sozinhos no universo? O futuro da exploração é promissor, e talvez um dia você seja quem ajudará a encontrar um novo mundo.`,
           backgroundImage: bg22,
           characterImage: character2,
         },
         {
-          title: "The end of the journey",
-          description: `The crew of the Stella Explorer left a message for future generations: "Continue the journey. The stars still have secrets to reveal, and humanity will always find new horizons."`,
+          title: "O Fim da Jornada",
+          description: `A tripulação da Stella Explorer deixou uma mensagem para as gerações futuras: 'Continuem a jornada. As estrelas ainda têm segredos a revelar, e a humanidade sempre encontrará novos horizontes.'`,
           backgroundImage: bg22,
           characterImage: character1,
         },
         {
-          title: "The adventure never ends.",
+          title: "A aventura nunca tem fim.",
           description: ``,
           backgroundImage: bg22,
           characterImage: character1,
@@ -247,6 +247,6 @@ export const story = {
   ],
   credits: {
     team: 'T.A.R.D.I.S',
-    slogan: 'The adventure never ends...'
+    slogan: 'A aventura nunca tem fim...'
   }
 };

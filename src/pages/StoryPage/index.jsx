@@ -179,7 +179,7 @@ export default function StoryPage() {
       /> 
       */}
       <NextButton 
-        text={'Next'}
+        text={'Continuar'}
         onClick={changeNextStoryIndex}
       />
     </div>

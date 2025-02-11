@@ -91,7 +91,7 @@ export default function DescriptionPage() {
       /> 
       */}
       <NextButton 
-        text={'Next'}
+        text={'Continuar'}
         onClick={handleToNextPage}
       />
     </>

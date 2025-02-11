@@ -3,24 +3,24 @@ import { useNavigate } from 'react-router-dom';
 
 const quizData = [
   {
-    question: 'The Doppler effect is a phenomenon related to the change in wave frequency due to the relative motion between the source and the observer.',
-    correctAnswer: 'True',
-    options: ['True', 'False'],
+    question: 'O efeito Doppler é um fenômeno relacionado à mudança na frequência de uma onda devido ao movimento relativo entre a fonte e o observador.',
+    correctAnswer: 'Verdadeiro',
+    options: ['Verdadeiro', 'Falso'],
   },
   {
-    question: 'An exoplanet is a planet that orbits a star outside our solar system.',
-    correctAnswer: 'True',
-    options: ['True', 'False'],
+    question: 'Um exoplaneta é um planeta que orbita uma estrela de fora do nosso sistema solar.',
+    correctAnswer: 'Verdadeiro',
+    options: ['Verdadeiro', 'Falso'],
   },
   {
-    question: 'The nearest exoplanet to Earth is 4.24 light-years away.',
-    correctAnswer: 'True',
-    options: ['True', 'False'],
+    question: 'O exoplaneta mais próximo da Terra está a 4.24 anos-luz de distância.',
+    correctAnswer: 'Verdadeiro',
+    options: ['Verdadeiro', 'Falso'],
   },
   {
-    question: 'All exoplanets discovered so far are habitable.',
-    correctAnswer: 'False',
-    options: ['True', 'False'],
+    question: 'Todos os exoplanetas descobertos até agora são habitáveis.',
+    correctAnswer: 'Falso',
+    options: ['Verdadeiro', 'Falso'],
   },
 ];
 
@@ -47,9 +47,9 @@ function TriviaMethodGame() {
       // Verifica se a resposta está correta
       if (option === quizData[currentQuestionIndex].correctAnswer) {
         setScore(score + 1);
-        alert('You got it right!');
+        alert('Muito bem!! Você Acertou!!');
       } else {
-        alert('You got it wrong!');
+        alert('Não foi dessa vez!');
       }
     };
 

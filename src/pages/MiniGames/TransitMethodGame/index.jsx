@@ -71,12 +71,12 @@ function TransitMethodGame() {
     // Verificamos se o jogador clicou no corpo correto
     if (bodyIndex === correctBody) {
       setScore(score + 1);
-      alert("You got it right! A possible exoplanet has been detected!");
+      alert("Você acertou! Um possível exoplaneta foi detectado!");
       if((score + 1) >= maximumScore) {
         navigate('/history');
       }
     } else {
-      alert("Try again. This one doesn't contain an exoplanet.");
+      alert("Tente novamente. O escolhido não contém um explaneta.");
     }
 
     // Reinicializamos o jogo após cada tentativa
