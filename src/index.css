@@ -1,0 +1,49 @@
+:root {
+  --primary-color-1: #f17932;
+  --primary-color-2: #3263f1;
+  --secondary-color-1: #6CB948;
+  --success-color-1: #2BDE3D;
+  --warning-color-1: #FFD953;
+  --danger-color-1: #FC5555;
+  --black-color-1: #000000;
+  --black-color-2: #3f3e3e;
+  --black-color-3: #474646;
+  --black-color-4: #5B5B5B;
+  --white-color-1: #FFFFFF;
+  --white-color-2: #D9D9D9;
+  --neutral-color-1: #B1C3E4;
+  --trasnparent-color-1: #FFFFFF00;
+
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--black-color-1);
+
+  background-color: var(--black-color-1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "Jura", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Silkscreen", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+}

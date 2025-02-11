@@ -1,0 +1,25 @@
+.App {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.background {
+  background-color: black;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background: url('../../assets/StoryPage/bg/bg3.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.name {
+  font-size: 40px;
+  color: white;
+
+  background-color: black;
+}

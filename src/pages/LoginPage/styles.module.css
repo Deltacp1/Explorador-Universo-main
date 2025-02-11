@@ -1,0 +1,30 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('../../assets/StoryPage/background0.avif') no-repeat center center;
+  background-size: cover;
+  font-family: 'Press Start 2P', cursive; 
+}
+
+.login-title {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.login-button {
+  padding: 15px 30px;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #333333;
+}

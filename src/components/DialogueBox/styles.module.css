@@ -1,0 +1,90 @@
+.dialogue-box {
+  z-index: 10;
+
+  width: 60%;
+  height: 30vh;
+  /* Fundo semi-transparente */
+  position: absolute;
+  bottom: 0px;
+  left: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  background: url('../../assets/StoryPage/DialogueBox.png');
+  background-size: cover;
+
+  font-size: 18px;
+  color: white;
+
+  border: 0px solid red;
+}
+
+.title {
+  border: 0px solid blue;
+  position: relative;
+  top: 14%;
+
+  font-size: 2vw;
+
+  text-align: center;
+}
+
+.description {
+  border: 0px solid blue;
+  position: relative;
+  top: 15%;
+
+  font-size: 1.4vw;
+  
+  padding-left: 40px;
+  padding-right: 40px;
+
+  text-align: center;
+}
+
+.link {
+  font-weight: 100;
+  font-size: 12px;
+  text-decoration: none;
+
+  position: relative;
+  top: 35%;
+
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  /* Adicionando transição suave */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Estilo padrão */
+  /* Verde, por exemplo */
+  background-color: white;
+  color: black;
+  border: none;
+
+  font-weight: bold;
+}
+
+.link:hover {
+  /* Mudança de cor ao passar o mouse */
+  /* Tom mais escuro de verde */
+  background-color: white; 
+  
+  /* Efeito de leve aumento */
+  transform: scale(1.05);
+
+  /* Sombra ao passar o mouse */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.link:active {
+  /* Efeito de clique */
+  transform: scale(0.95);
+
+  /* Mudança na cor do botão ao clicar */
+  background-color: white;
+}
