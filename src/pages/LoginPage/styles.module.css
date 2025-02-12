@@ -4,27 +4,66 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('../../assets/StoryPage/background0.avif') no-repeat center center;
+  background: url('../../assets/StoryPage/background0.avif') no-repeat center
+    center;
   background-size: cover;
-  font-family: 'Press Start 2P', cursive; 
+  font-family: 'Press Start 2P', cursive;
+  padding: 20px; /* Adiciona espaçamento para evitar cortes */
+  text-align: center;
 }
 
+/* Ajuste no título */
 .login-title {
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
+  font-size: 2rem; /* Tamanho base */
 }
 
+/* Botão mais responsivo */
 .login-button {
   padding: 15px 30px;
+  font-size: 1rem;
   color: #ffffff;
   background-color: #1a1a1a;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%; /* Adapta a largura para telas menores */
+  max-width: 300px; /* Evita que fique grande demais */
 }
 
 .login-button:hover {
   background-color: #333333;
+}
+
+/* 🌐 Ajustes para telas menores */
+@media (max-width: 768px) {
+  .login-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .login-button {
+    font-size: 0.9rem;
+    padding: 12px 25px;
+  }
+}
+
+/* 📱 Para telas bem pequenas */
+@media (max-width: 480px) {
+  .login-title {
+    font-size: 1.2rem;
+  }
+
+  .login-button {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+  }
 }

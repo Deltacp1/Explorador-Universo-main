@@ -2,30 +2,38 @@
   position: relative;
   height: 100vh;
   width: 100vw;
+  overflow: hidden; /* Evita rolagem indesejada */
 }
 
+/* Posição do personagem */
 .character {
   position: absolute;
   bottom: 0px;
   left: 2vw;
+  max-width: 100%;
 }
 
+/* Imagem do personagem responsiva */
 .characterImg {
-  height: 500px;
+  height: 500px; /* Valor padrão */
+  max-width: 100%; /* Evita que ultrapasse o contêiner */
   transition: transform 0.5s ease, opacity 0.5s ease;
   opacity: 0;
 }
 
+/* Animação ao carregar */
 .characterImg.loaded {
   opacity: 1;
   transform: scale(1);
 }
 
+/* Efeito ao sair */
 .characterImg.exiting {
   opacity: 0;
   transform: scale(0.95);
 }
 
+/* Fundo animado */
 .background {
   transition: background-image 0.8s ease-in-out, opacity 0.8s ease-in-out;
   opacity: 0;
@@ -37,4 +45,31 @@
 
 .background.exiting {
   opacity: 0;
+}
+
+/* 🌐 Ajustes para tablets */
+@media (max-width: 1024px) {
+  .character {
+    left: 5vw; /* Ajuste para centralizar melhor */
+    bottom: 3vh;
+  }
+
+  .characterImg {
+    height: 35vw; /* Menor para telas médias */
+    max-height: 400px;
+  }
+}
+
+/* 📱 Ajustes para telas menores (celulares) */
+@media (max-width: 768px) {
+  .character {
+    left: 50%; /* Centraliza na tela */
+    transform: translateX(-50%);
+    bottom: 5vh;
+  }
+
+  .characterImg {
+    height: 30vw; /* Ajustado para celulares */
+    max-height: 300px; /* Evita que ocupe muito espaço */
+  }
 }
