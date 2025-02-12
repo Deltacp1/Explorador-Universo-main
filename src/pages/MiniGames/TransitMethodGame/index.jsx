@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
 // Função para gerar luminosidade randomicamente para os corpos normais
@@ -45,7 +45,7 @@ function TransitMethodGame() {
     let interval;
     if (correctBody !== null) {
       interval = setInterval(() => {
-        setBlinkingLuminosity(prevLuminosity =>
+        setBlinkingLuminosity((prevLuminosity) =>
           prevLuminosity === 100 ? Math.random() * 5 + 55 : 100
         );
       }, 1000);
@@ -65,12 +65,12 @@ function TransitMethodGame() {
   const handleClick = (bodyIndex) => {
     if (bodyIndex === correctBody) {
       setScore(score + 1);
-      showMessage("Você acertou! Um possível exoplaneta foi detectado!");
-      if ((score + 1) >= maximumScore) {
+      showMessage('Você acertou! Um possível exoplaneta foi detectado!');
+      if (score + 1 >= maximumScore) {
         navigate('/history');
       }
     } else {
-      showMessage("Tente novamente. O escolhido não contém um exoplaneta.");
+      showMessage('Tente novamente. O escolhido não contém um exoplaneta.');
     }
   };
 
@@ -86,25 +86,24 @@ function TransitMethodGame() {
               position: 'absolute',
               left: positions[bodyIndex]?.left,
               top: positions[bodyIndex]?.top,
-              opacity: bodyIndex === correctBody ? blinkingLuminosity / 100 : luminosity / 100,
-              backgroundImage: 'url(src/assets/MinigameTransito/star_game1.png)',
+              opacity:
+                bodyIndex === correctBody
+                  ? blinkingLuminosity / 100
+                  : luminosity / 100,
+              backgroundImage: 'url(public/MinigameTransito/star_game1.png)',
             }}
           ></div>
         ))}
       </div>
       <p style={{ color: 'white' }}>Score: {`${score}/${maximumScore}`}</p>
-      {message.visible && (
-        <div style={styles.messageBox}>
-          {message.text}
-        </div>
-      )}
+      {message.visible && <div style={styles.messageBox}>{message.text}</div>}
     </div>
   );
 }
 
 const styles = {
   background: {
-    backgroundImage: 'url(src/assets/MinigameTransito/background_game1.webp)',
+    backgroundImage: 'url(public/MinigameTransito/background_game1.webp)',
     backgroundSize: 'cover',
     width: '100vw',
     height: '100vh',
