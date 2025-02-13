@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from '/MinigameTrivia\background_gameTrivia.webp';
+import backgroundImage from '/MinigameTrivia/background_gameTrivia.webp';
 
 const quizData = [
   {
