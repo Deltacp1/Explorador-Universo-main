@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import backgroundImage from '/MinigameTrivia\background_gameTrivia.webp';
 
 const quizData = [
   {
@@ -113,8 +114,7 @@ function TriviaMethodGame() {
 const styles = {
   background: {
     // Substitua pelo caminho correto do fundo
-    backgroundImage:
-      'url(src/assets/MinigameTrivia/background_gameTrivia.webp)',
+    backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     width: '100vw',
     height: '100vh',
