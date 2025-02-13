@@ -20,11 +20,10 @@ function repeatSecondCharacter(str) {
 }
 
 export default function ChapterPage({ name }) {
-
   const location = useLocation();
   const { chapterName, chapterIndex } = location.state || {};
 
-  const [displayedName, setDisplayedName] = useState('');  
+  const [displayedName, setDisplayedName] = useState('');
   const [completedName, setCompletedName] = useState(
     repeatSecondCharacter(chapterName)
   );
@@ -34,55 +33,48 @@ export default function ChapterPage({ name }) {
 
   const handleToStoryPage = () => {
     navigate('/history');
-  }
+  };
 
   useEffect(() => {
-    if(chapterIndex == 0) {
+    if (chapterIndex == 0) {
       setBackgroundImage(bg0);
-
     } else if (chapterIndex == 1) {
       setBackgroundImage(bg1);
-      
     } else if (chapterIndex == 2) {
       setBackgroundImage(bg2);
-
     } else if (chapterIndex == 3) {
       setBackgroundImage(bg3);
-
     } else if (chapterIndex == 4) {
       setBackgroundImage(bg4);
-
     } else {
       setBackgroundImage(bg0);
     }
-  }, [chapterIndex])
+  }, [chapterIndex]);
 
   useEffect(() => {
     let currentIndex = 0;
     const intervalId = setInterval(() => {
-      if (currentIndex < (completedName.length - 1)) {
-        setDisplayedName((prev) => prev + completedName[currentIndex]); 
+      if (currentIndex < completedName.length - 1) {
+        setDisplayedName((prev) => prev + completedName[currentIndex]);
         currentIndex++;
       } else {
-        clearInterval(intervalId);  
+        clearInterval(intervalId);
       }
     }, 100); // Velocidade da digitação em milissegundos
 
-    return () => clearInterval(intervalId);  
+    return () => clearInterval(intervalId);
   }, [completedName]);
 
   return (
     <>
       <div className={styles.App}>
-        <div 
-          className={styles.background} 
+        <div
+          className={styles.background}
           style={{
             // Definindo a imagem de fundo aqui
-            backgroundImage: `url(${
-              backgroundImage
-            })`, 
+            backgroundImage: `url(${backgroundImage})`,
             // Fazendo com que a imagem cubra todo o div
-            backgroundSize: 'cover', 
+            backgroundSize: 'cover',
             height: '100%',
             display: 'flex',
             justifyContent: 'center',
@@ -101,10 +93,7 @@ export default function ChapterPage({ name }) {
         onClick={handleToStoryPage}
       />
       */}
-      <NextButton 
-        text={'Next'}
-        onClick={handleToStoryPage}
-      />
+      <NextButton text={'Próximo'} onClick={handleToStoryPage} />
     </>
   );
 }

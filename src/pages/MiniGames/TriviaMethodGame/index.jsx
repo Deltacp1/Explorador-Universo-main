@@ -74,7 +74,7 @@ function TriviaMethodGame() {
       <div style={styles.container}>
         <div style={styles.questionContainer}>
           <h2 style={{ color: 'white' }}>
-            Question {currentQuestionIndex + 1} of {quizData.length}
+            Pergunta {currentQuestionIndex + 1} de {quizData.length}
           </h2>
           <p style={{ color: 'white', fontSize: '1.2rem' }}>
             {quizData[currentQuestionIndex].question}
@@ -105,7 +105,7 @@ function TriviaMethodGame() {
         )}
 
         {/* Exibição da pontuação */}
-        <p style={{ color: 'white', marginTop: '20px' }}>Score: {score}</p>
+        <p style={{ color: 'white', marginTop: '20px' }}>Pontuação: {score}</p>
       </div>
     </div>
   );
