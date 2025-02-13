@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
+import backgroundImage from '/MinigameTransito/background_game1.webp';
+import starImage from '/MinigameTransito/star_game1.png';
 
 // Função para gerar luminosidade randomicamente para os corpos normais
 function getRandomLuminosity() {
@@ -90,7 +92,7 @@ function TransitMethodGame() {
                 bodyIndex === correctBody
                   ? blinkingLuminosity / 100
                   : luminosity / 100,
-              backgroundImage: 'url(public/MinigameTransito/star_game1.png)',
+              backgroundImage: `url(${starImage})`,
             }}
           ></div>
         ))}
@@ -103,7 +105,8 @@ function TransitMethodGame() {
 
 const styles = {
   background: {
-    backgroundImage: 'url(public/MinigameTransito/background_game1.webp)',
+    backgroundImage: `url(${backgroundImage})`,
+
     backgroundSize: 'cover',
     width: '100vw',
     height: '100vh',

@@ -1,0 +1,14 @@
+{
+  "..\\..\\..\\AppData\\Local\\npm-cache\\_npx\\8b377f6eec906bc4\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": "..\\..\\..\\AppData\\Local\\npm-cache\\_npx\\8b377f6eec906bc4\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app",
+    "files": [
+      "static/chunks/fallback/AppData_Local_npm-cache__npx_8b377f6eec906bc4_node_modules_next_dist_pages__app_js.js"
+    ]
+  },
+  "..\\..\\..\\AppData\\Local\\npm-cache\\_npx\\8b377f6eec906bc4\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": "..\\..\\..\\AppData\\Local\\npm-cache\\_npx\\8b377f6eec906bc4\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error",
+    "files": [
+      "static/chunks/fallback/AppData_Local_npm-cache__npx_8b377f6eec906bc4_node_modules_next_dist_pages__error_js.js"
+    ]
+  }
+}
