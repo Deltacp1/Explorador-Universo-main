@@ -12,6 +12,9 @@ import { GameProvider } from './context/GameContext';
 import MiniGames from './pages/MiniGames';
 import KeplerImages from './pages/KeplerImages';
 import GameMode from './pages/GameMode';
+import TournamentMode from './pages/TournamentMode';
+import QuizPage from './pages/QuizPage';
+import ResultPage from './pages/ResultsPage';
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
             <Route path="/credits" element={<CreditsPage />} />
             <Route path="/kepler" element={<KeplerImages />} />
             <Route path="/game-mode" element={<GameMode />} />
+            <Route path="/tournament-join" element={<TournamentMode />} />
+            <Route path="/quiz" element={<QuizPage />} />
+            <Route path="/results" element={<ResultPage />} />
           </Routes>
         </Router>
       </GameProvider>
