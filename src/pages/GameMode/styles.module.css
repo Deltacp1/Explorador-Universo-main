@@ -1,0 +1,178 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.content {
+  width: 100%;
+  max-width: 42rem; /* 2xl in Tailwind */
+  z-index: 10;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.title {
+  font-size: 1.875rem; /* text-3xl */
+  margin-bottom: 2rem;
+  text-align: center;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem; /* text-4xl */
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.card {
+  background-color: rgba(13, 18, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  animation: slideInBottom 0.5s ease-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.iconContainer {
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.storyIconContainer {
+  background-color: rgba(64, 122, 214, 0.2);
+}
+
+.tournamentIconContainer {
+  background-color: rgba(236, 72, 153, 0.2);
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.storyIcon {
+  color: rgb(96, 165, 250);
+}
+
+.tournamentIcon {
+  color: rgb(236, 72, 153);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.cardDescription {
+  color: rgb(209, 213, 219);
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s, transform 0.1s;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.defaultButton {
+  background-color: rgb(59, 130, 246);
+  color: white;
+}
+
+.defaultButton:hover {
+  background-color: rgb(37, 99, 235);
+}
+
+.accentButton {
+  background-color: rgb(236, 72, 153);
+  color: white;
+}
+
+.accentButton:hover {
+  background-color: rgb(219, 39, 119);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
