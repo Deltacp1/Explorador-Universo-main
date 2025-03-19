@@ -19,7 +19,9 @@ import AdminPage from './pages/AdminPage';
 import AdminClasses from './pages/AdminClasses';
 import AdminQuestions from './pages/AdminQuestions';
 import ClassQuestions from './pages/ClasssQuestions';
-
+import MinigamePage from './pages/MinigamePage';
+import GravitySimulator from './pages/MinigamePage/gravity-simulator';
+import SolarSystem3D from './pages/MinigamePage/solar-system-3d';
 function App() {
   return (
     <>
@@ -42,9 +44,19 @@ function App() {
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/admin/classes" element={<AdminClasses />} />
             <Route path="/admin/questions" element={<AdminQuestions />} />
+
             <Route
               path="/admin/classes/:classId/questions"
               element={<ClassQuestions />}
+            />
+            <Route path="/minigames-page" element={<MinigamePage />} />
+            <Route
+              path="/minigames-page/gravity-simulator"
+              element={<GravitySimulator />}
+            />
+            <Route
+              path="/minigames-page/3d-solar-system"
+              element={<SolarSystem3D />}
             />
           </Routes>
         </Router>
