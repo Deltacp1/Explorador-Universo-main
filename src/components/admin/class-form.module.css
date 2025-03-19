@@ -1,0 +1,87 @@
+/* Form card */
+.formCard {
+  padding: 1.5rem;
+  background: rgba(13, 18, 30, 0.8);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  box-shadow: 0 0 20px rgba(120, 113, 255, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Form title */
+.formTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Form group */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Label */
+.label {
+  display: block;
+  color: white;
+  font-weight: 500;
+}
+
+/* Input */
+.input {
+  background-color: rgba(13, 18, 30, 0.5);
+  border-color: rgba(120, 113, 255, 0.3);
+  color: white;
+}
+
+/* Textarea */
+.textarea {
+  background-color: rgba(13, 18, 30, 0.5);
+  border-color: rgba(120, 113, 255, 0.3);
+  color: white;
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Info box */
+.infoBox {
+  padding: 0.75rem;
+  background-color: rgba(120, 113, 255, 0.1);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: rgb(209, 213, 219);
+}
+
+/* Class ID */
+.classId {
+  font-family: monospace;
+  color: rgba(120, 113, 255, 0.8);
+}
+
+/* Button container */
+.buttonContainer {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

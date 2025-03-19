@@ -1,0 +1,166 @@
+/* Container styles */
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem 1rem 2rem;
+}
+
+/* Content wrapper */
+.contentWrapper {
+  width: 100%;
+  max-width: 72rem;
+  z-index: 10;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.backButton {
+  margin-right: 0.5rem;
+}
+
+/* Title */
+.title {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Empty state */
+.emptyState {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(13, 18, 30, 0.8);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  box-shadow: 0 0 20px rgba(120, 113, 255, 0.1);
+}
+
+.emptyStateIcon {
+  color: rgba(120, 113, 255, 0.8);
+  margin: 0 auto 1rem;
+}
+
+.emptyStateTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.emptyStateText {
+  color: rgb(209, 213, 219);
+  margin-bottom: 1.5rem;
+}
+
+.createClassButton {
+  margin: 0 auto;
+}
+
+/* Class grid */
+.classGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Class card */
+.classCard {
+  padding: 1.5rem;
+  background: rgba(13, 18, 30, 0.8);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  box-shadow: 0 0 20px rgba(120, 113, 255, 0.1);
+}
+
+.classHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.classInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chevronIcon {
+  color: rgba(120, 113, 255, 0.8);
+}
+
+.className {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+}
+
+.questionCount {
+  font-size: 0.875rem;
+  color: rgb(156, 163, 175);
+}
+
+/* Expanded content */
+.expandedContent {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(120, 113, 255, 0.2);
+}
+
+.noQuestionsText {
+  color: rgb(156, 163, 175);
+  font-style: italic;
+}
+
+.questionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.questionItem {
+  background-color: rgba(13, 18, 30, 0.5);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.questionNumber {
+  color: rgba(120, 113, 255, 0.8);
+  font-weight: 500;
+}
+
+.viewAllContainer {
+  margin-top: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

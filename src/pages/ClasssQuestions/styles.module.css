@@ -1,0 +1,208 @@
+/* Container styles */
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem 1rem 2rem;
+}
+
+/* Content wrapper */
+.contentWrapper {
+  width: 100%;
+  max-width: 72rem;
+  z-index: 10;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.backButton {
+  margin-right: 0.5rem;
+}
+
+.classNameLabel {
+  color: rgb(156, 163, 175);
+  font-size: 0.875rem;
+}
+
+/* Title */
+.title {
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
+/* New Question button */
+.newQuestionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Empty state */
+.emptyState {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(13, 18, 30, 0.8);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  box-shadow: 0 0 20px rgba(120, 113, 255, 0.1);
+}
+
+.questionMark {
+  color: rgba(120, 113, 255, 0.8);
+  font-size: 2.25rem;
+  margin: 0 auto 1rem;
+}
+
+.emptyStateTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.emptyStateText {
+  color: rgb(209, 213, 219);
+  margin-bottom: 1.5rem;
+}
+
+.addFirstButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+
+/* Question grid */
+.questionGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Question card */
+.questionCard {
+  padding: 1.5rem;
+  background: rgba(13, 18, 30, 0.8);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  box-shadow: 0 0 20px rgba(120, 113, 255, 0.1);
+}
+
+.questionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.questionText {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.questionNumber {
+  background-color: rgba(120, 113, 255, 0.2);
+  color: rgba(120, 113, 255, 0.8);
+  font-size: 0.875rem;
+  padding: 0 0.5rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.questionActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Options grid */
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.option {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(13, 18, 30, 0.5);
+  border: 1px solid rgba(120, 113, 255, 0.1);
+  color: white;
+}
+
+.correctOption {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(22, 101, 52, 0.3);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: white;
+}
+
+.correctIcon {
+  color: rgb(34, 197, 94);
+}
+
+.incorrectIcon {
+  color: rgb(156, 163, 175);
+}
+
+.correctLabel {
+  font-size: 0.75rem;
+  color: rgb(34, 197, 94);
+  margin-left: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

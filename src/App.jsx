@@ -15,6 +15,10 @@ import GameMode from './pages/GameMode';
 import TournamentMode from './pages/TournamentMode';
 import QuizPage from './pages/QuizPage';
 import ResultPage from './pages/ResultsPage';
+import AdminPage from './pages/AdminPage';
+import AdminClasses from './pages/AdminClasses';
+import AdminQuestions from './pages/AdminQuestions';
+import ClassQuestions from './pages/ClasssQuestions';
 
 function App() {
   return (
@@ -35,6 +39,13 @@ function App() {
             <Route path="/tournament-join" element={<TournamentMode />} />
             <Route path="/quiz" element={<QuizPage />} />
             <Route path="/results" element={<ResultPage />} />
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/admin/classes" element={<AdminClasses />} />
+            <Route path="/admin/questions" element={<AdminQuestions />} />
+            <Route
+              path="/admin/classes/:classId/questions"
+              element={<ClassQuestions />}
+            />
           </Routes>
         </Router>
       </GameProvider>

@@ -1,6 +1,6 @@
 'use client';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Trophy } from 'lucide-react';
+import { ArrowRight, HeartIcon, Trophy } from 'lucide-react';
 import StarryBackground from '../../components/StarryBackground';
 import styles from './styles.module.css';
 import { useGame } from '../../context/GameContext';
@@ -20,7 +20,11 @@ const GameMode = () => {
 
       // Navigate to prologue instead of /story to match original behavior
       navigate('/prologue');
-    } else {
+    }
+    if (mode == 'admin') {
+      navigate('/admin');
+    }
+    if (mode == 'tournament') {
       navigate('/tournament-join');
     }
   };
@@ -82,6 +86,32 @@ const GameMode = () => {
               onClick={() => handleModeSelect('tournament')}
             >
               Entrar em um torneio
+            </button>
+          </div>
+          {/* Professor Card */}
+          <div
+            className={styles.card}
+            onClick={() => handleModeSelect('admin')}
+          >
+            <div
+              className={`${styles.iconContainer} ${styles.tournamentIconContainer}`}
+            >
+              <HeartIcon
+                className={`${styles.icon} ${styles.tournamentIcon}`}
+              />
+            </div>
+
+            <h3 className={styles.cardTitle}>Modo editor</h3>
+
+            <p className={styles.cardDescription}>
+              Crie perguntas e torneios para ajudar na fixação do conteúdo.
+            </p>
+
+            <button
+              className={`${styles.button} ${styles.accentButton}`}
+              onClick={() => handleModeSelect('admin')}
+            >
+              Entrar como professor
             </button>
           </div>
         </div>
