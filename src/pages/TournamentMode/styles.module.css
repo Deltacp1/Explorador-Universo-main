@@ -1,0 +1,138 @@
+/* Container styles */
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+/* Form wrapper */
+.formWrapper {
+  width: 100%;
+  max-width: 28rem;
+  z-index: 10;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.title {
+  font-size: 1.875rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+/* Card */
+.card {
+  padding: 2rem;
+  animation: scaleIn 0.5s ease-in-out;
+  background: rgba(13, 18, 30, 0.8);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  box-shadow: 0 0 20px rgba(120, 113, 255, 0.1);
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input groups */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Labels */
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 500;
+}
+
+.labelIcon {
+  color: rgba(120, 113, 255, 0.8);
+}
+
+/* Inputs */
+.input {
+  background-color: rgba(13, 18, 30, 0.5);
+  border-color: rgba(120, 113, 255, 0.3);
+  color: white;
+}
+
+/* Helper text */
+.helperText {
+  font-size: 0.75rem;
+  color: rgb(156, 163, 175);
+  margin-top: 0.25rem;
+}
+
+/* Button group */
+.buttonGroup {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Join button */
+.joinButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem;
+}
+
+/* Quick join section */
+.quickJoinSection {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(120, 113, 255, 0.2);
+}
+
+.quickJoinText {
+  font-size: 0.75rem;
+  color: rgb(156, 163, 175);
+  margin-bottom: 0.5rem;
+}
+
+.quickFillButton {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

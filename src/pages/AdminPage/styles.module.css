@@ -1,0 +1,185 @@
+/* Container styles */
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem 1rem 2rem;
+}
+
+/* Content wrapper */
+.contentWrapper {
+  width: 100%;
+  max-width: 72rem;
+  z-index: 10;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+/* Title */
+.title {
+  font-size: 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+/* Back button */
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Card grid */
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Menu cards */
+.menuCard {
+  padding: 1.5rem;
+  background: rgba(13, 18, 30, 0.8);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  box-shadow: 0 0 20px rgba(120, 113, 255, 0.1);
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.menuCard:hover {
+  box-shadow: 0 0 25px rgba(120, 113, 255, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.iconContainer {
+  padding: 0.75rem;
+  background-color: rgba(120, 113, 255, 0.1);
+  border-radius: 9999px;
+}
+
+.icon {
+  color: rgba(120, 113, 255, 0.8);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+}
+
+.cardDescription {
+  color: rgb(209, 213, 219);
+  margin-bottom: 1rem;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(156, 163, 175);
+}
+
+/* Reference section */
+.referenceSection {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(13, 18, 30, 0.8);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  box-shadow: 0 0 20px rgba(120, 113, 255, 0.1);
+}
+
+.referenceTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.referenceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .referenceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.referenceCard {
+  background-color: rgba(13, 18, 30, 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+}
+
+.referenceSubtitle {
+  font-weight: 500;
+  color: rgba(120, 113, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+/* Lists */
+.orderedList {
+  list-style-type: decimal;
+  list-style-position: inside;
+  color: rgb(209, 213, 219);
+  margin: 0;
+  padding: 0;
+}
+
+.bulletList {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: rgb(209, 213, 219);
+  margin: 0;
+  padding: 0;
+}
+
+.orderedList li,
+.bulletList li {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

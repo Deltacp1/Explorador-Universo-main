@@ -1,0 +1,422 @@
+/* Container principal */
+.container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background com estrelas */
+.backgroundContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #0a0a1a;
+  overflow: hidden;
+}
+
+.starsBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/MinigamePage/stars-bg.png');
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.floatingParticle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+/* Conteúdo principal */
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.backButton {
+  color: white;
+  background-color: rgba(30, 41, 59, 0.5);
+}
+
+.backButton:hover {
+  background-color: rgba(30, 41, 59, 0.8);
+}
+
+.backIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.pageTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  font-family: 'Silkscreen', monospace;
+}
+
+.titleIcon {
+  color: #38bdf8;
+}
+
+.statsContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pointsBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(15, 23, 42, 0.7);
+  border-color: rgba(51, 65, 85, 0.7);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Silkscreen', monospace;
+}
+
+.trophyIcon {
+  color: #facc15;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Filtros */
+.filtersContainer {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.filtersWrapper {
+  display: flex;
+  gap: 0.75rem;
+  min-width: max-content;
+}
+
+.filterButton {
+  color: white;
+  background-color: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: 'Silkscreen', monospace;
+  font-size: 0.875rem;
+}
+
+.filterButton:hover {
+  background-color: rgba(30, 41, 59, 0.8);
+}
+
+.filterButtonActive {
+  background-color: rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+}
+
+.filterButton2DActive {
+  background-color: rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+}
+
+.filterButton3DActive {
+  background-color: rgba(124, 58, 237, 0.2);
+  border-color: #8b5cf6;
+}
+
+.filterButtonContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Grid de jogos */
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card de jogo */
+.gameCard {
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gameCardUnlocked:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.gameCardLocked {
+  opacity: 0.7;
+  filter: grayscale(0.7);
+}
+
+.gameImageContainer {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+}
+
+.imageGradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(15, 23, 42, 1), transparent);
+  z-index: 1;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.gameImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lockedOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.lockIconContainer {
+  background-color: rgba(15, 23, 42, 0.8);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lockIcon {
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.starsContainer {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+  z-index: 2;
+}
+
+.starActive {
+  color: #facc15;
+  width: 1.25rem;
+  height: 1.25rem;
+  filter: drop-shadow(0 0 2px rgba(250, 204, 21, 0.5));
+}
+
+.starInactive {
+  color: rgba(255, 255, 255, 0.3);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.gameTypeBadgeContainer {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.gameTypeBadge {
+  background-color: rgba(15, 23, 42, 0.8);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.cardHeader {
+  padding: 1rem 1rem 0.5rem;
+}
+
+.badgesContainer {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.categoryBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.physicsBadge {
+  background-color: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.astronomyBadge {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #8b5cf6;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.engineeringBadge {
+  background-color: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.badgeIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.difficultyBadge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.easyBadge {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.mediumBadge {
+  background-color: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.hardBadge {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.gameTitle {
+  font-size: 1.125rem;
+  color: white;
+  font-weight: 600;
+}
+
+.cardContent {
+  padding: 0.5rem 1rem;
+}
+
+.gameDescription {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.cardFooter {
+  padding: 0.5rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeToPlay {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+}
+
+.timeIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.bestScore {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+}
+
+.scoreIcon {
+  color: #facc15;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.noGamesFound {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .pageTitle {
+    font-size: 1.25rem;
+  }
+
+  .gamesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+}

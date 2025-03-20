@@ -1,0 +1,298 @@
+/* Container styles */
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1rem 1rem 2rem;
+}
+
+/* Content wrapper */
+.contentWrapper {
+  width: 100%;
+  max-width: 42rem;
+  z-index: 10;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.title {
+  font-size: 1.875rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+/* Results card */
+.resultsCard {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  animation: scaleIn 0.5s ease-in-out;
+  background: rgba(13, 18, 30, 0.8);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  box-shadow: 0 0 20px rgba(120, 113, 255, 0.1);
+}
+
+/* Player info section */
+.playerInfoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .playerInfoSection {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.playerNameContainer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .playerNameContainer {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.playerTitle {
+  color: rgba(120, 113, 255, 0.8);
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.playerName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.scoreContainer {
+  background-color: rgba(13, 18, 30, 0.5);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(120, 113, 255, 0.3);
+}
+
+.scoreLabel {
+  color: rgba(120, 113, 255, 0.8);
+  font-size: 0.875rem;
+}
+
+.scoreValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Stats grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.statCard {
+  background-color: rgba(30, 58, 138, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(120, 113, 255, 0.1);
+}
+
+.statLabel {
+  color: rgba(120, 113, 255, 0.8);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.rankDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.sparkleIcon {
+  color: rgb(250, 204, 21);
+}
+
+/* Rank badges */
+.goldBadge {
+  color: rgb(250, 204, 21);
+}
+
+.silverBadge {
+  color: rgb(229, 231, 235);
+}
+
+.bronzeBadge {
+  color: rgb(180, 83, 9);
+}
+
+.rankNumber {
+  width: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+/* Leaderboard */
+.leaderboardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.tableContainer {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(120, 113, 255, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.leaderboardTable {
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  background-color: rgba(13, 18, 30, 0.5);
+}
+
+.tableHeaderCell {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(120, 113, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tableBody {
+  background-color: rgba(30, 58, 138, 0.2);
+}
+
+.tableBody tr {
+  border-top: 1px solid rgba(120, 113, 255, 0.1);
+}
+
+.playerRow {
+  transition: background-color 0.2s;
+}
+
+.playerRow:hover {
+  background-color: rgba(13, 18, 30, 0.3);
+}
+
+.currentPlayerRow {
+  background-color: rgba(120, 113, 255, 0.2);
+}
+
+.tableCell {
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+}
+
+.rankCell {
+  display: flex;
+  align-items: center;
+}
+
+.playerNameCell {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.youLabel {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: rgba(120, 113, 255, 0.8);
+}
+
+.scoreCell {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+/* Button container */
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .buttonContainer {
+    flex-direction: row;
+  }
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

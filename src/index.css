@@ -1,19 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 25% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 25% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 230 80% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 260 80% 60%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 25% 15%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 280 80% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 350 80% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 25% 20%;
+    --input: 240 25% 15%;
+    --ring: 240 25% 30%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-space-dark text-foreground overflow-x-hidden;
+    background-image: radial-gradient(
+        circle at 50% 50%,
+        rgba(26, 26, 74, 0.2),
+        rgba(10, 10, 26, 0.1)
+      ),
+      url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='1' fill='%23ffffff' fill-opacity='0.15'/%3E%3C/svg%3E");
+    background-size: 100% 100%, 150px 150px;
+  }
+}
+@layer components {
+  .text-glow {
+    text-shadow: 0 0 5px rgba(67, 97, 238, 0.5), 0 0 10px rgba(67, 97, 238, 0.3);
+  }
+
+  .text-glow-accent {
+    text-shadow: 0 0 5px rgba(247, 37, 133, 0.5),
+      0 0 10px rgba(247, 37, 133, 0.3);
+  }
+
+  .space-button {
+    @apply relative bg-space-accent text-white font-bold py-3 px-8 rounded-md 
+           shadow-[0_0_10px_rgba(67,97,238,0.5)] 
+           hover:shadow-[0_0_15px_rgba(67,97,238,0.7)] 
+           transition-all duration-300 ease-out
+           overflow-hidden;
+  }
+
+  .space-button:after {
+    @apply content-[''] absolute top-0 left-0 w-full h-full;
+    background: linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0.3) 22%,
+      rgba(255, 255, 255, 0) 23%
+    );
+    background-position: -250px 0;
+    background-repeat: no-repeat;
+  }
+
+  .space-button:hover:after {
+    transition: background-position 0.7s ease-out;
+    background-position: 250px 0;
+  }
+
+  .space-card {
+    @apply bg-space-blue/80 backdrop-blur-md border border-space-accent/30 rounded-lg
+           shadow-[0_0_15px_rgba(67,97,238,0.15)]
+           hover:shadow-[0_0_20px_rgba(67,97,238,0.25)]
+           transition-all duration-300;
+  }
+
+  .pixel-corners {
+    clip-path: polygon(
+      0% 4px,
+      4px 4px,
+      4px 0%,
+      calc(100% - 4px) 0%,
+      calc(100% - 4px) 4px,
+      100% 4px,
+      100% calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 4px),
+      calc(100% - 4px) 100%,
+      4px 100%,
+      4px calc(100% - 4px),
+      0% calc(100% - 4px)
+    );
+  }
+
+  .stars-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: pulse-star 3s infinite ease-in-out;
+  }
+
+  @keyframes pulse-star {
+    0%,
+    100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+}
+
 :root {
   --primary-color-1: #f17932;
   --primary-color-2: #3263f1;
-  --secondary-color-1: #6CB948;
-  --success-color-1: #2BDE3D;
-  --warning-color-1: #FFD953;
-  --danger-color-1: #FC5555;
+  --secondary-color-1: #6cb948;
+  --success-color-1: #2bde3d;
+  --warning-color-1: #ffd953;
+  --danger-color-1: #fc5555;
   --black-color-1: #000000;
   --black-color-2: #3f3e3e;
   --black-color-3: #474646;
-  --black-color-4: #5B5B5B;
-  --white-color-1: #FFFFFF;
-  --white-color-2: #D9D9D9;
-  --neutral-color-1: #B1C3E4;
-  --trasnparent-color-1: #FFFFFF00;
-
+  --black-color-4: #5b5b5b;
+  --white-color-1: #ffffff;
+  --white-color-2: #d9d9d9;
+  --neutral-color-1: #b1c3e4;
+  --trasnparent-color-1: #ffffff00;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -37,11 +179,15 @@
 }
 
 p {
-  font-family: "Jura", sans-serif;
+  font-family: 'Jura', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: "Silkscreen", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Silkscreen', sans-serif;
 }
 
 h1 {
